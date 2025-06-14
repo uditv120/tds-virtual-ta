@@ -1,0 +1,10 @@
+fastapi
+uvicorn[standard]
+openai
+aiofiles
+python-multipart
+pytesseract
+Pillow
+requests
+beautifulsoup4
+chromadb
