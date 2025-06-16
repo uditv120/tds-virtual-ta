@@ -88,7 +88,17 @@ def search_typesense_vector(query_vector, top_k=TOP_K):
         ]
     }
     response = typesense_client.multi_search.perform(search_parameters)
-    return response["results"][0]["hits"]
+    results = response["results"][0]
+    hits = results.get("hits", [])  # <-- this line protects you from KeyError
+
+    print(f"\n[INFO] Retrieved {len(hits)} chunks from Typesense:")
+    for i, hit in enumerate(hits):
+        text = hit['document'].get("text", "")[:150].replace("\n", " ").strip()
+        url = hit['document'].get("url", "N/A")
+        print(f"Chunk {i+1}: {text}\n→ {url}\n")
+
+    return hits
+
 
 
 
