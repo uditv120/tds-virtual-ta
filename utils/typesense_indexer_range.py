@@ -16,7 +16,7 @@ if not (NOMIC_API_KEY and TYPESENSE_API_KEY):
 
 EMBED_DIM         = 768
 COLLECTION_NAME   = "tds_index_embed_chunks"
-DATA_FILE         = "/Users/sumitsingh/Desktop/IIT_Madras/TDS/Project1_TDS_Virtial_TA/scraping_scripts/Combined_course_and_discourse_data.json"
+DATA_FILE         = "https://github.com/uditv120/tds-virtual-ta/blob/main/scraping_scripts/Combined_course_and_discourse_data.json"
 BATCH_SIZE        = 32
 MAX_TEXT_LENGTH   = 5000
 
