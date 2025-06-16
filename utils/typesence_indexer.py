@@ -18,7 +18,7 @@ if not (NOMIC_API_KEY and TYPESENSE_API_KEY):
 
 EMBED_DIM        = 768
 COLLECTION_NAME  = "tds_chunks"
-DATA_FILE        = "/Users/sumitsingh/Desktop/IIT_Madras/TDS/Project_1/tds_scraper/combined_tds_rag_data1.json"
+DATA_FILE        = "https://github.com/uditv120/tds-virtual-ta/blob/main/data/combined_tds_rag_data.json"
 BATCH_SIZE       = 16
 MAX_TEXT_LENGTH  = 5000  # To avoid Typesense payload limit
 
